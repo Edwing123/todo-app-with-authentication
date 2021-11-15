@@ -9,4 +9,48 @@
 :root {
     font-family: var(--font-sans);
     line-height: var(--line-md);
+    background-color: #303a52;
+    color: var(--color-grey-100);
 }
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+/* common layout sections styles */
+.layout {
+    padding: var(--size-6) var(--size-10);
+}
+
+/* header */
+.header {
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding: var(--size-2);
+
+    border-radius: var(--radius-xs);
+    font-size: var(--scale-2);
+    font-weight: var(--font-bold);
+    letter-spacing: var(--size-px);
+}
+
+.logo:hover {
+    background-color: rgba(255, 255, 255, 0.124);
+}
+
+.navigation__link {
+    font-size: var(--scale-2);
+    margin-right: var(--size-3);
+}
+
+.navigation__link:hover {
+    color: var(--color-grey-500);
+}
+
+/* footer */

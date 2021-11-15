@@ -1,0 +1,18 @@
+{{define "header"}}
+<header class="header layout">
+    <span class="logo">
+        <a href="/">UrTodos</a>
+    </span>
+
+    <nav class="main-navigation" aria-label="Main navigation">
+        <a href="/" class="navigation__link">Home</a>
+        <a href="/about" class="navigation__link">About</a>
+
+        {{if .Data.IsAuthenticated}}
+        <a href="/logout" class="navigation__link">Logout</a>
+        {{else}}
+        <a href="/login" class="navigation__link">Login</a>
+        {{end}}
+    </nav>
+</header>
+{{end}}
