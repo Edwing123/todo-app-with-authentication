@@ -15,7 +15,7 @@
 
 a {
     color: currentColor;
-    text-decoration: none;
+    text-decoration: inherit;
 }
 
 /* common layout sections styles */
@@ -38,6 +38,7 @@ a {
     font-size: var(--scale-2);
     font-weight: var(--font-bold);
     letter-spacing: var(--size-px);
+    text-decoration: none;
 }
 
 .logo:hover {
@@ -53,4 +54,30 @@ a {
     color: var(--color-grey-500);
 }
 
-/* footer */
+/* MESSAGES */
+.alert {
+    width: 90%;
+    max-width: var(--width-sm);
+    padding: var(--size-7);
+    margin: var(--size-24) auto 0;
+
+    background-color: var(--color-blue-700);
+    border-radius: var(--radius-xs);
+}
+
+.alert__title {
+    text-align: center;
+    font-size: var(--scale-5);
+    margin-bottom: var(--size-5);
+}
+
+.alert__message {
+    font-size: var(--scale-3);
+    text-align: center;
+}
+
+
+.alert a {
+    color: var(--color-black);
+    font-weight: var(--font-semibold);
+}

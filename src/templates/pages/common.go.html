@@ -5,7 +5,16 @@
     <body>
         <div class="container">
             {{template "header" .}}
+            {{if .Data.IsAuthenticated}}
             {{template "content" .}}
+            {{else}}
+            <div class="alert">
+                <h1 class="alert__title">Welcome to UrTodos</h1>
+                <p class="alert__message">
+                    <a href="/login">login</a> or <a href="/register">register</a>
+                </p>
+            </div>
+            {{end}}
             <footer class="footer"></footer>
         </div>
     </body>
