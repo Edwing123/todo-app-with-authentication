@@ -3,7 +3,6 @@ package main
 import (
 	"embed"
 	"flag"
-	"fmt"
 	"io/fs"
 	"log"
 	"net/http"
@@ -31,7 +30,6 @@ func createAssetsHandler() http.Handler {
 	var err error
 
 	if *serveAssetsFromDisk {
-		fmt.Println("ok")
 		assetsFS = os.DirFS("src/assets")
 	} else {
 		assetsFS, err = fs.Sub(assets, "src/assets")
