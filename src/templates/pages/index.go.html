@@ -1,11 +1,13 @@
 {{define "meta"}}
-<meta name="description" content="Web app to manage your todos" />
-<title>Home | Todo App</title>
+<meta name="description" content="{{.Page.Meta.Title}}" />
+<title>{{.Page.Meta.Title}}</title>
 {{end}}
 
 {{define "content"}}
-<main class="main">
-    <h1>Home</h1>
+<main class="main content">
+    <section class="section">
+        <h1 class="title">Welcome to UrTodos</h1>
+    </section>
 </main>
 {{end}}
 
