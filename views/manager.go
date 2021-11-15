@@ -15,7 +15,7 @@ type Manager struct {
 // if everything is fine it returns a byte slice with the executed template
 // and a nil error, otherwise it will return a nil byte slice and an error
 // indicating what failed in the execution.
-func (m *Manager) ExecuteView(name string, viewContext ViewContext) ([]byte, error) {
+func (m *Manager) ExecuteView(name string, viewContext *ViewContext) ([]byte, error) {
 	var output bytes.Buffer
 	err := m.t.ExecuteTemplate(&output, name, viewContext)
 
